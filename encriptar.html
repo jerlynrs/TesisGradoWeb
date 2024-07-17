@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptar Mensaje</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <button onclick="window.location.href='index.html'">Inicio</button>
+        </div>
+        <h1>Encriptar Mensaje</h1>
+        <div class="encryption-method">
+            <label for="method">Selecciona el método de encriptado:</label>
+            <select id="method" onchange="toggleMethod()">
+                <option value="cesar">Cifrado de César</option>
+                <option value="rsa">Cifrado RSA</option>
+            </select>
+        </div>
+        <div id="cesar-options" class="method-options">
+            <label for="rotations">Número de rotaciones:</label>
+            <input type="number" id="rotations" min="1" max="25">
+        </div>
+        <div class="message-boxes">
+            <div class="box">
+                <label for="message">Mensaje:</label>
+                <textarea id="message" rows="4" cols="50"></textarea>
+            </div>
+            <div class="box">
+                <label for="encrypted-message">Mensaje Encriptado:</label>
+                <textarea id="encrypted-message" rows="4" cols="50" readonly></textarea>
+            </div>
+        </div>
+        <div class="buttons">
+            <button onclick="encryptMessage()">Cifrar</button>
+            <button onclick="clearFields()">Limpiar</button>
+        </div>
+        <div id="wheel-container">
+            <div id="wheel">
+                <div id="inner-wheel">
+                    <div class="letter">A</div>
+                    <div class="letter">B</div>
+                    <div class="letter">C</div>
+                    <div class="letter">D</div>
+                    <div class="letter">E</div>
+                    <div class="letter">F</div>
+                    <div class="letter">G</div>
+                    <div class="letter">H</div>
+                    <div class="letter">I</div>
+                    <div class="letter">J</div>
+                    <div class="letter">K</div>
+                    <div class="letter">L</div>
+                    <div class="letter">M</div>
+                    <div class="letter">N</div>
+                    <div class="letter">O</div>
+                    <div class="letter">P</div>
+                    <div class="letter">Q</div>
+                    <div class="letter">R</div>
+                    <div class="letter">S</div>
+                    <div class="letter">T</div>
+                    <div class="letter">U</div>
+                    <div class="letter">V</div>
+                    <div class="letter">W</div>
+                    <div class="letter">X</div>
+                    <div class="letter">Y</div>
+                    <div class="letter">Z</div>
+                </div>
+                <div id="outer-wheel">
+                    <div class="letter">A</div>
+                    <div class="letter">B</div>
+                    <div class="letter">C</div>
+                    <div class="letter">D</div>
+                    <div class="letter">E</div>
+                    <div class="letter">F</div>
+                    <div class="letter">G</div>
+                    <div class="letter">H</div>
+                    <div class="letter">I</div>
+                    <div class="letter">J</div>
+                    <div class="letter">K</div>
+                    <div class="letter">L</div>
+                    <div class="letter">M</div>
+                    <div class="letter">N</div>
+                    <div class="letter">O</div>
+                    <div class="letter">P</div>
+                    <div class="letter">Q</div>
+                    <div class="letter">R</div>
+                    <div class="letter">S</div>
+                    <div class="letter">T</div>
+                    <div class="letter">U</div>
+                    <div class="letter">V</div>
+                    <div class="letter">W</div>
+                    <div class="letter">X</div>
+                    <div class="letter">Y</div>
+                    <div class="letter">Z</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
